@@ -1,0 +1,280 @@
+/* Style global de la page */
+@import url(menu.css);
+:root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  --main-color: rgb(205, 218, 56);
+}
+
+body {
+  background-image: url('kaspa.jpg'); /* L'image de fond */
+  background-size: cover; /* L'image couvre toute la fenêtre */
+  background-position: center; /* Centrer l'image */
+  background-attachment: fixed; /* Fixe l'image pendant le défilement */
+  background-repeat: no-repeat; /* L'image ne se répète pas */
+  color: white;
+}
+
+/* Header */
+header {
+  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour que le texte soit lisible */
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  font-family: Courier New, monospace;
+}
+
+header h1 {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: left;
+}
+
+.container {
+  width: auto;
+  padding: 0 20px;
+}
+
+/* Contenu principal */
+main {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Fond sombre pour rendre le texte lisible */
+}
+
+main h2 {
+  font-size: 2em;
+  color: #FFB800; /* Couleur dorée pour les titres */
+  margin-bottom: 10px;
+}
+
+main p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ccc;
+  font-size: 1em;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Section hover effect */
+section:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+}
+
+/* Image de fond pour chaque section */
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond sombre pour améliorer la lisibilité du texte */
+  border-radius: 10px;
+}
+
+/* Style des images dans les sections */
+.section-image {
+  max-width: 100%; /* Pour que l'image ne dépasse pas la largeur de son conteneur */
+  height: auto; /* Pour garder les proportions de l'image */
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Galerie d'images et vidéo */
+.media-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.photo {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.photo:hover {
+  transform: scale(1.05); /* Zoom léger sur l'image au survol */
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Formulaire de contact */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form label {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  color: white;
+}
+
+form input, form textarea {
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: white;
+}
+
+form button {
+  padding: 10px;
+  background-color: #FFB800;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #FF9900;
+}
+
+/* Liste des liens */
+ul {
+  list-style: none;
+  display: flex;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  color: #FFB800;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* Si l'écran est plus petit que 768px (tablette ou mobile en mode paysage) */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2em; /* Réduire la taille du titre */
+  }
+
+  main h2 {
+    font-size: 1.8em; /* Réduire la taille des sous-titres */
+  }
+
+  .media-gallery {
+    flex-direction: column; /* Afficher les images en colonne sur les petits écrans */
+    gap: 10px;
+  }
+
+  .photo {
+    width: 100%; /* Les images prennent toute la largeur du conteneur */
+    height: auto; /* Conserver les proportions */
+  }
+
+  form {
+    width: 90%; /* Formulaire prend 90% de la largeur de l'écran */
+  }
+
+  footer {
+    padding: 10px; /* Réduire l'espacement dans le footer */
+  }
+}
+
+/* Si l'écran est plus petit que 480px (mobile en mode portrait) */
+@media (max-width: 480px) {
+  header {
+    padding: 20px 0; /* Réduire le padding du header */
+  }
+
+  header h1 {
+    font-size: 1.8em; /* Réduire encore la taille du titre */
+    text-align: center; /* Centrer le titre */
+  }
+
+  nav ul {
+    padding: 0; /* Retirer le padding du ul */
+    display: block; /* Afficher les éléments du menu sur une seule colonne */
+  }
+
+  nav ul li {
+    margin: 5px 0; /* Espacement vertical entre les éléments du menu */
+    text-align: center; /* Centrer les liens du menu */
+  }
+
+  .container {
+    padding: 0 10px; /* Réduire les espaces latéraux */
+  }
+
+  .photo {
+    width: 100%; /* Les images prennent toute la largeur du conteneur */
+  }
+
+  form {
+    width: 100%; /* Le formulaire prend toute la largeur disponible */
+    padding: 15px; /* Réduire le padding du formulaire */
+  }
+
+  form input, form textarea {
+    font-size: 0.9em; /* Réduire la taille du texte dans les champs */
+  }
+
+  form button {
+    font-size: 1em; /* Réduire la taille du texte du bouton */
+    padding: 8px; /* Réduire la taille du bouton */
+  }
+}
+
+/* Si l'écran est plus grand que 1200px (écrans de bureau larges) */
+@media (min-width: 1200px) {
+  header h1 {
+    font-size: 3.5em; /* Augmenter la taille du titre */
+  }
+
+  main h2 {
+    font-size: 2.5em; /* Augmenter la taille des sous-titres */
+  }
+
+  .media-gallery {
+    gap: 30px; /* Augmenter l'espacement entre les images */
+  }
+
+  .photo {
+    width: 350px; /* Augmenter la taille des images */
+    height: 250px;
+  }
+
+  form {
+    width: 600px; /* Limiter la largeur du formulaire */
+  }
+}
