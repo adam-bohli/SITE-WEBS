@@ -32,10 +32,11 @@ header p {
 /* Section */
 section {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
     padding: 40px 20px;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 /* Cards */
@@ -45,9 +46,9 @@ section {
     border-radius: 15px;
     overflow: hidden;
     width: 300px;
-    margin: 15px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .card img {
@@ -97,4 +98,54 @@ footer {
     background-color: #000; /* Fond noir pour le pied de page */
     color: #d4af37; /* Texte doré */
     margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #c49a2e;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    header p {
+        font-size: 1.1em;
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%; /* Réduire la largeur des cartes sur les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+
+    .card {
+        width: 90%; /* Cartes plus petites sur très petits écrans */
+    }
+
+    .card a {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
 }
