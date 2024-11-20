@@ -1,0 +1,130 @@
+/* Général - Appliquer une marge et une police de base */
+body {
+    font-family: Arial, sans-serif; /* Police générique */
+    margin: 0; /* Supprimer la marge par défaut du body */
+    padding: 0; /* Supprimer le padding par défaut du body */
+    height: 100vh; /* Utiliser toute la hauteur de la fenêtre */
+    display: flex; /* Utiliser le modèle Flexbox */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    flex-direction: column; /* Disposer les éléments verticalement */
+    background-image: url(./web-845809_1280.jpg); /* Couleur de fond claire */
+    background-size: cover; /* Couvrir toute la page avec l'image de fond */
+}
+
+/* Texte "A vous de juger" en haut de la page */
+.judgment-text {
+    text-align: center; /* Centrer le texte */
+    width: 100%; /* Occuper toute la largeur */
+    position: absolute; /* Positionner en haut */
+    top: 20px; /* Décalage du haut de la fenêtre */
+    left: 50%; /* Centrer horizontalement */
+    transform: translateX(-50%); /* Ajuster pour bien centrer */
+    font-size: 2rem; /* Taille de police pour "A vous de juger" */
+    color: whitesmoke; /* Couleur du texte */
+    font-weight: bold; /* Mettre en gras */
+}
+
+/* Container du header */
+header {
+    text-align: center; /* Centrer le texte à l'intérieur du header */
+    padding: 20px; /* Ajouter de l'espace autour du contenu du header */
+    background-color: #fff; /* Fond blanc pour le header */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    z-index: 1; /* S'assurer que le header soit bien au-dessus */
+}
+
+/* Style pour le titre */
+h1 {
+    color: blue; /* Couleur sombre pour le titre */
+    font-size: 2rem; /* Taille de police ajustée */
+    margin-bottom: 10px; /* Espacement sous le titre */
+}
+
+/* Style pour la description */
+p {
+    color: black; /* Couleur plus claire pour le texte */
+    font-size: 1.2rem; /* Taille de texte confortable */
+    line-height: 1.6; /* Hauteur de ligne pour aérer le texte */
+    margin: 0; /* Supprimer les marges par défaut */
+    padding: 0 20px; /* Ajouter un peu de padding à gauche et à droite */
+}
+
+/* Media Queries */
+
+/* Mobile - Écrans de moins de 600px (par exemple, smartphones) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Réduire la taille de la police sur mobile */
+        flex-direction: column; /* Assurer que les éléments restent en colonne */
+        padding: 10px; /* Ajouter un peu de padding sur les bords */
+    }
+
+    .judgment-text {
+        font-size: 1.5rem; /* Réduire la taille du texte "A vous de juger" */
+        top: 10px; /* Réduire l'espace en haut */
+    }
+
+    header {
+        padding: 15px; /* Moins de padding pour les petits écrans */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Réduire la taille du titre */
+    }
+
+    p {
+        font-size: 1rem; /* Réduire la taille du texte */
+        padding: 0 10px; /* Réduire le padding des côtés */
+    }
+}
+
+/* Tablette - Écrans entre 600px et 1024px (par exemple, tablettes et petits ordinateurs portables) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    body {
+        font-size: 16px; /* Taille de police moyenne pour les tablettes */
+    }
+
+    .judgment-text {
+        font-size: 1.8rem; /* Ajuster la taille du texte "A vous de juger" */
+        top: 15px; /* Réduire un peu l'espace en haut */
+    }
+
+    header {
+        padding: 25px; /* Padding plus large pour un meilleur espace */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Ajuster la taille du titre */
+    }
+
+    p {
+        font-size: 1.1rem; /* Taille de texte légèrement plus grande */
+        padding: 0 15px; /* Réduire le padding des côtés */
+    }
+}
+
+/* Bureau - Écrans de plus de 1024px (ordinateurs de bureau et grands écrans) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px; /* Taille de police plus grande pour les grands écrans */
+    }
+
+    .judgment-text {
+        font-size: 2rem; /* Taille du texte "A vous de juger" inchangée */
+    }
+
+    header {
+        padding: 30px; /* Plus de padding sur les grands écrans */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Agrandir le titre sur les grands écrans */
+    }
+
+    p {
+        font-size: 1.3rem; /* Agrandir la taille du texte */
+        padding: 0 20px; /* Augmenter légèrement le padding */
+    }
+}
