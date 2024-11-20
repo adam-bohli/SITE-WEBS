@@ -1,0 +1,45 @@
+    body {
+        padding: 0.5%;
+    }
+
+    p { 
+        margin-top: 0; 
+        text-align: left;
+        padding: 5px;
+        }
+
+        main{
+            width: 50%;
+            float: left;
+        }
+          header {
+            background-color: brown;
+            height: 187px;
+        }
+        #navigation{
+           
+        }
+        #navbar-main{
+                  
+                  height: 87px;
+      }
+        ul {
+            list-style-type: none;
+            background-color: aqua;
+            padding-top: 20px;
+            }
+
+          li {
+             background-color: blue;
+            display: inline-block;
+              }
+          #Contact{
+            float: right;
+            width: 50%;
+            background-color: rgb(153, 107, 107);
+          }
+        footer {   
+            width: 100%;      
+            float: left;
+            text-align: center; 
+            }
